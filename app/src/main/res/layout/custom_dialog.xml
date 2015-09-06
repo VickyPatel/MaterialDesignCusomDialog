@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:textAppearance="?android:attr/textAppearance"
-                android:textColor="@color/primary_text"
+                android:textColor="@color/secondary_text"
                 android:textStyle="normal"
                 android:textSize="@dimen/dialog_content_text_size"/>
 
@@ -125,6 +125,8 @@
             android:textColor="@color/accent"
             android:textStyle="bold"
             android:textSize="@dimen/dialog_actions_button_text_size"/>
+
+
 
     </LinearLayout>
 

@@ -168,9 +168,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
 
 //        // Retrieve views from the inflated dialog layout and update their values
-//        tittleLayout = (LinearLayout) dialog.findViewById(R.id.layout_dialog_tittle);
-//        txtTitle = (TextView) dialog.findViewById(R.id.txt_dialog_title);
-//        txtTitle.setText("Select an account");
+        tittleLayout = (LinearLayout) dialog.findViewById(R.id.layout_dialog_tittle);
+        txtTitle = (TextView) dialog.findViewById(R.id.txt_dialog_title);
+        txtTitle.setText("Select an account");
 //
 //        contentLayout = (LinearLayout) dialog.findViewById(R.id.layout_dialog_content);
 //        txtMessage = (TextView) dialog.findViewById(R.id.txt_dialog_message);

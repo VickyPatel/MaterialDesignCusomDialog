@@ -30,10 +30,6 @@
                 android:textSize="@dimen/dialog_tittle_size"
                 android:textStyle="bold" />
 
-            <!--<View-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"-->
-            <!--android:background="@color/selected" />-->
         </LinearLayout>
 
         <!-- layout dialog content -->
@@ -41,41 +37,13 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/selectionRecycleView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:background="#ffffff"
             android:scrollbars="vertical">
 
         </android.support.v7.widget.RecyclerView>
 
-
-        <LinearLayout
-            android:id="@+id/layout_dialog_buttons"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dialog_actions_layout_height"
-            android:layout_below="@+id/layout_dialog_head"
-            android:orientation="horizontal">
-
-
-            <!--<de.hdodenhof.circleimageview.CircleImageView-->
-            <!--android:id="@+id/circleImageView"-->
-            <!--android:src="@drawable/ic_action"-->
-            <!--android:layout_width="@dimen/dialog_actions_button_height"-->
-            <!--android:layout_height="@dimen/dialog_actions_button_height" />-->
-
-            <ImageView
-                android:layout_width="@dimen/dialog_actions_button_height"
-                android:layout_height="@dimen/dialog_actions_button_height"
-                android:src="@drawable/profilepicture" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add Account"
-                android:gravity="center"
-                android:layout_gravity="center"/>
-
-        </LinearLayout>
 
     </LinearLayout>
 

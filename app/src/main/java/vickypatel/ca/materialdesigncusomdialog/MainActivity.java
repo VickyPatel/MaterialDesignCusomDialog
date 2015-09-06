@@ -12,11 +12,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button simpleDialog, withoutTittleDialog;
+    LinearLayout tittleLayout, contentLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,9 +75,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
 
         // Retrieve views from the inflated dialog layout and update their values
+        tittleLayout = (LinearLayout) dialog.findViewById(R.id.layout_dialog_tittle);
         TextView txtTitle = (TextView) dialog.findViewById(R.id.txt_dialog_title);
         txtTitle.setText("Tittle");
 
+        contentLayout = (LinearLayout) dialog.findViewById(R.id.layout_dialog_content);
         TextView txtMessage = (TextView) dialog.findViewById(R.id.txt_dialog_message);
         txtMessage.setText("Content.");
 
@@ -106,6 +110,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 txtMessage.setText("I am content of simple dialog.");
                 break;
             case R.id.withoutTittleDialog:
+                tittleLayout.setVisibility(View.GONE);
+
+                //Remove above margin for content
+                LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                llp.setMargins(0, 0, 0, 0); // llp.setMargins(left, top, right, bottom);
+                contentLayout.setLayoutParams(llp);
+
+
+                txtMessage.setText("I am content without tittle.");
 
         }
     }

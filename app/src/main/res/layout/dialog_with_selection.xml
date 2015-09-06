@@ -37,7 +37,8 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/selectionRecycleView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
+            android:maxHeight="150dp"
             android:layout_gravity="left"
             android:background="#ffffff"
             android:scrollbars="vertical">

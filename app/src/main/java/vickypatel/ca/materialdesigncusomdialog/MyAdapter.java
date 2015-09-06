@@ -10,13 +10,15 @@ import android.widget.TextView;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
     String[] accountEmails = {};
+    int[] profileImages = {};
     private  static  final int TYPE_CONTENT= 0;
     private  static  final  int TYPE_ACTIONS = 1;
 
 
 
-    public MyAdapter(String[] accountEmails) {
+    public MyAdapter(String[] accountEmails, int[] profileImages) {
         this.accountEmails = accountEmails;
+        this.profileImages = profileImages;
     }
 
     @Override
@@ -30,8 +32,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
 
         if(holder.holderId == TYPE_CONTENT){
             holder.accountEmail.setText(accountEmails[position]);
+            holder.accountImage.setImageResource(profileImages[position]);
         }else  if(holder.holderId == TYPE_ACTIONS){
             holder.accountEmail.setText("Add Accounts");
+            holder.accountImage.setImageResource(R.drawable.ic_action);
         }
 
 

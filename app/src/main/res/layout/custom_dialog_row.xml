@@ -13,7 +13,7 @@
         android:id="@+id/accountImage"
         android:layout_width="@dimen/dialog_actions_button_height"
         android:layout_height="@dimen/dialog_actions_button_height"
-        android:src="@drawable/profilepicture" />
+        android:src="@drawable/convo" />
 
     <TextView
         android:id="@+id/accountEmail"

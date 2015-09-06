@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     RecyclerView.LayoutManager mLayoutManager;
 
     String[] emails = {"vicky.7676@yahoo.in", "vicky.patel@hotmail.com", "github/VickyPatel"};
+    int[] profileImages = {R.drawable.convo,R.drawable.jigu,R.drawable.lala};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // inflate the layout dialog_layout.xml and set it as contentView
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.dialog_with_selection, null, false);
-        dialog.setCanceledOnTouchOutside(false);
+        dialog.setCanceledOnTouchOutside(true);
         dialog.setContentView(view);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
 
@@ -178,9 +179,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Selective dialog
         mRecycleView = (RecyclerView) dialog.findViewById(R.id.selectionRecycleView);
-        mAdapter = new MyAdapter(emails);
+        mAdapter = new MyAdapter(emails, profileImages);
         mRecycleView.setAdapter(mAdapter);
-        mLayoutManager = new LinearLayoutManager(this);
+        mLayoutManager = new MyLinearLayoutManager(this);
         mRecycleView.setLayoutManager(mLayoutManager);
 
     }

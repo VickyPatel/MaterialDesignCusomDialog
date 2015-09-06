@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     RecyclerView.Adapter mAdapter;
     RecyclerView.LayoutManager mLayoutManager;
 
-    String[] emails = {"vicky.7676@yahoo.in", "vicky.patel@hotmail.com", "github/VickyPatel"};
-    int[] profileImages = {R.drawable.convo,R.drawable.jigu,R.drawable.lala};
+    String[] emails = {"vicky.7676@yahoo.in", "jigu.patel@hotmail.com","lala@gmail.com","punit@yahoo.com"};
+    int[] profileImages = {R.drawable.convo,R.drawable.jigu, R.drawable.lala,R.drawable.punit};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

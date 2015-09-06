@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#FFFFFF"
-    android:orientation="vertical">
+    android:orientation="vertical"
+
+    >
 
 
     <!-- layout title -->
@@ -37,11 +39,12 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/selectionRecycleView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:maxHeight="150dp"
+            android:layout_height="@dimen/dialog_max_height"
+            android:maxHeight="@dimen/dialog_max_height"
             android:layout_gravity="left"
             android:background="#ffffff"
-            android:scrollbars="vertical">
+            android:scrollbars="vertical"
+            >
 
         </android.support.v7.widget.RecyclerView>
 
